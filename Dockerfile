@@ -2,7 +2,7 @@
 # Build an image with the environment required to run the SPARS repo analysis #
 #                                                                             #
 ##-- Build command --##                                                       #                                                                                                           
-# docker build                           #
+# docker build                                                                #
 #                                                                             #
 ##-- Run command --##                                                         #
 # docker run -d \                                                             #
