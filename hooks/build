@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build --build-arg RSTUDIO_VERSION=1.1.456
+docker build -t kamermanpr/docker-spars:v1.0 --build-arg RSTUDIO_VERSION=1.1.456 .
