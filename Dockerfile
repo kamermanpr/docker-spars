@@ -24,4 +24,4 @@ MAINTAINER Peter Kamerman <peter.kamerman@gmail.com>
 RUN Rscript -e "install.packages(c('ggridges', 'kableExtra', 'robustlmm', 'lme4', 'lqmm', 'HLMdiag', 'sjPlot', 'car', 'lmerTest', 'influence.ME', 'boot'))"
 
 ##-- Add GitHub packages --##
-RUN Rscript -e "devtools::install_github("thomasp85/patchwork")"
+RUN Rscript -e "devtools::install_github('thomasp85/patchwork')"
