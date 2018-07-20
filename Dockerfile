@@ -1,14 +1,13 @@
-################################################################
-# Build an image with the environment required to run the
-# SPARS repo analysis
-#
-##-- Build command --##
-# docker build --build-arg RSTUDIO_VERSION=1.1.456
-#
-##-- Run command --##
-# docker run -d -p 8787:8787
-#
-################################################################
+###############################################################################
+# Build an image with the environment required to run the SPARS repo analysis #
+#                                                                             #
+##-- Build command --##                                                       #                                                                                                           
+# docker build --build-arg RSTUDIO_VERSION=1.1.456                            #
+#                                                                             #
+##-- Run command --##                                                         #
+# docker run -d -p 8787:8787                                                  #
+#                                                                             #
+###############################################################################
 
 ##-- Base image --##
 # Debian (stretch) +
