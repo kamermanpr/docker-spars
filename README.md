@@ -10,11 +10,11 @@ The image is built using the [rocker/verse](https://hub.docker.com/r/rocker/vers
 
 ### Details
 - **OS:** Debian 
-  - stretch _(at the time the image was first created using the Dockerfile)_  
+  - stretch _(kamermanpr/docker-spars:v1.0.?)_  
 - **R:** 
   - v3.5.0  
 - **RStudio server:** 
-  - v1.1.456 _(at the time the image was first created using the Dockerfile)_ 
+  - v1.1.456 _(kamermanpr/docker-spars:v1.0.?)_ 
 - **MRAN packages:** 
   - tidyverse 
   - boot
@@ -29,5 +29,5 @@ The image is built using the [rocker/verse](https://hub.docker.com/r/rocker/vers
   - robustlmm
   - sjPlot
 - **GitHub packages:** 
-  - patchwork ([thomasp85/patchwork](https://github.com/thomasp85/patchwork))  
+  - patchwork ([thomasp85/patchwork](https://github.com/thomasp85/patchwork) _commit: 1d3eccb2e065b79ace1e993c895e0b28dd870ee2_)  
 - **LaTex:** TinyTex
