@@ -5,9 +5,9 @@
 # Build an image with the environment required to run the SPARS repo analysis #
 #                                                                             #
 # <-- Build command -->                                                       #                                                                                                           
-# docker build                                                                #        
+# docker build -t kamermanpr/docker-spars:<version>                           #        
 #                                                                             #
-# <-- The build image can also be downloaded from Docker Hub -->              #
+# <-- The build image can be downloaded from Docker Hub -->                   #
 # docker pull kamermanpr/docker-spars:<version>                               # 
 #									      #
 # <-- Run command -->                                                         #
@@ -22,9 +22,9 @@
 ###############################################################################
 #
 # <-- Base image -->
-# Debian:stretch (kamermanpr/docker-spars:v1.0.?)
+# Debian:stretch (all kamermanpr/docker-spars version tags < v2.0.0)
 # R v3.5.0
-# RStudio server:v1.1.456 (kamermanpr/docker-spars:v1.0.?)
+# RStudio server:v1.1.456 (all kamermanpr/docker-spars version tags < v2.0.0)
 # LaTex (TinyTex distribution, https://yihui.name/tinytex/)
 # tidyverse (MRAN 2018-06-01 R v3.5.0 snapshot)
 #
