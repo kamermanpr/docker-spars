@@ -4,6 +4,38 @@ A dockerfile to create an image of the R environment required to run the SPARS d
 
 ----
 
+## R environment
+
+The image is built using the [rocker/verse](https://hub.docker.com/r/rocker/verse/) image of [_base R_](https://cran.r-project.org/) _v3.5.0_, and includes [_RStudio server_](https://www.rstudio.com/products/rstudio/#Server), the [_TinyTex_](https://yihui.name/tinytex/) Latex distribution, the [_tidyverse_](https://www.tidyverse.org/) suite of R packages (with dependencies), and several R packages (with dependencies) that are required to run the markdown scripts in [SPARS](https://github.com/kamermanpr/SPARS). CRAN packages were installed from [MRAN](https://mran.microsoft.com/timemachine) using the 2018-06-01 snapshot for _R v3.5.0_. The only package installed form GitHub (_thomasp85/patchwork_) was locked to the 12 June 2018 commit: [_1d3eccb2e065b79ace1e993c895e0b28dd870ee2_](https://github.com/thomasp85/patchwork/tree/1d3eccb2e065b79ace1e993c895e0b28dd870ee2).
+
+### Details
+- **OS:**  
+    - Debian:stretch _(all kamermanpr/docker-spars version tags < v2.0.0)_   
+- **R:**  
+    - v3.5.0   
+- **RStudio server:**  
+    - v1.1.456 _(all kamermanpr/docker-spars version tags < v2.0.0)_  
+- **GitHub packages:**  
+    - patchwork  
+- **MRAN packages:**  
+    - boot  
+    - car  
+    - kableExtra
+    - ggplot2
+    - ggridges
+    - HLMdiag
+    - influence.ME
+    - lme4
+    - lmerTest
+    - lqmm
+    - robustlmm
+    - sjPlot
+    - tidyverse 
+- **LaTex:**   
+    - TinyTex
+
+----
+
 ## Using Docker to run the SPARS analysis
 
 You need to have Docker installed on your computer. To do so, go to [docker.com](https://www.docker.com/community-edition#/download) and follow the instructions for downloading and installing Docker for your operating system. Once Docker has been installed, follow the steps below, noting that Docker commands are entered in a terminal window (Linux and OSX/macOS) or command prompt window (Windows). Windows users also may wish to install [_GNU Make_](http://gnuwin32.sourceforge.net/downlinks/make.php) (required for the `make` method of running the scripts) and [_Git_](https://gitforwindows.org/) version control software (not essential). 
@@ -52,35 +84,3 @@ To run individual RMarkdown scripts (_\*.Rmd_ files)
 #### Shutting down
 
 Once done, log out of RStudio Server and enter the following into a terminal to stop the Docker container: `docker stop spars`. If you then want to remove the container, enter: `docker rm spars`. If you also want to remove the Docker image you downloaded, enter: `docker rmi kamermanpr/docker-spars:v1.0.4`
-    
-----
-
-## R environment
-
-The image is built using the [rocker/verse](https://hub.docker.com/r/rocker/verse/) image of [_base R_](https://cran.r-project.org/) _v3.5.0_, and includes [_RStudio server_](https://www.rstudio.com/products/rstudio/#Server), the [_TinyTex_](https://yihui.name/tinytex/) Latex distribution, the [_tidyverse_](https://www.tidyverse.org/) suite of R packages (with dependencies), and several R packages (with dependencies) that are required to run the markdown scripts in [SPARS](https://github.com/kamermanpr/SPARS). CRAN packages were installed from [MRAN](https://mran.microsoft.com/timemachine) using the 2018-06-01 snapshot for _R v3.5.0_. The only package installed form GitHub (_thomasp85/patchwork_) was locked to the 12 June 2018 commit: [_1d3eccb2e065b79ace1e993c895e0b28dd870ee2_](https://github.com/thomasp85/patchwork/tree/1d3eccb2e065b79ace1e993c895e0b28dd870ee2).
-
-### Details
-- **OS:**  
-    - Debian:stretch _(all kamermanpr/docker-spars version tags < v2.0.0)_   
-- **R:**  
-    - v3.5.0   
-- **RStudio server:**  
-    - v1.1.456 _(all kamermanpr/docker-spars version tags < v2.0.0)_  
-- **GitHub packages:**  
-    - patchwork  
-- **MRAN packages:**  
-    - boot  
-    - car  
-    - kableExtra
-    - ggplot2
-    - ggridges
-    - HLMdiag
-    - influence.ME
-    - lme4
-    - lmerTest
-    - lqmm
-    - robustlmm
-    - sjPlot
-    - tidyverse 
-- **LaTex:**   
-    - TinyTex
