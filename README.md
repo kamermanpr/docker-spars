@@ -1,12 +1,12 @@
 # docker-spars
 
-A dockerfile to create an image of the R environment required to run the SPARS data analysis scripts.
+A dockerfile to create an image of the R environment required to run the SPARS data analysis scripts ([_kamermanpr/SPARS_](https://github.com/kamermanpr/SPARS)).
 
 ----
 
 ## Using Docker to run the SPARS analysis
 
-You need to have Docker installed on your computer. To do so, go to [docker.com](https://www.docker.com/community-edition#/download) and follow the instructions for downloading and installing Docker for your operating system. Once Docker has been installed, follow the steps below, noting that Docker commands are entered in a terminal window (Linux and OSX/macOS) or command prompt window (Windows).
+You need to have Docker installed on your computer. To do so, go to [docker.com](https://www.docker.com/community-edition#/download) and follow the instructions for downloading and installing Docker for your operating system. Once Docker has been installed, follow the steps below, noting that Docker commands are entered in a terminal window (Linux and OSX/macOS) or command prompt window (Windows). Windows users also may wish to install [_GNU Make_](http://gnuwin32.sourceforge.net/downlinks/make.php) (required for the `make` method of running the scripts) and [_Git_](https://gitforwindows.org/) version control software (not essential). 
 
 #### Download the latest image
 
