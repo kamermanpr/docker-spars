@@ -43,8 +43,21 @@ MAINTAINER Peter Kamerman <peter.kamerman@gmail.com>
 # MRAN 2018-10-03 R v3.5.1 snapshot, ggplot2 (v3.0.0) is
 # re-installed in the MRAN package step below.
 #
-RUN Rscript -e "devtools::install_github('thomasp85/patchwork', ref = 'fd7958bae3e7a1e30237c751952e412a0a1d1242')"
+RUN Rscript -e "devtools::install_github('thomasp85/patchwork', ref='fd7958bae3e7a1e30237c751952e412a0a1d1242')"
 #
 # <-- Add MRAN packages -->
 #
-RUN Rscript -e "install.packages(c('boot', 'ggplot2', 'ggridges', 'ggeffects', 'kableExtra', 'robustlmm', 'lme4', 'lqmm', 'HLMdiag', 'sjPlot', 'car', 'lmerTest', 'influence.ME'))"
+RUN install2.r --error --deps TRUE \
+    car \
+    boot \
+    ggplot2 \
+    ggridges \
+    ggeffects \
+    kableExtra \
+    lme4 \
+    lmerTest \
+    lqmm \
+    robustlmm \
+    influence.ME \
+    HLMdiag \
+    sjPlot
