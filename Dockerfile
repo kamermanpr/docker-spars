@@ -26,7 +26,7 @@
 # R v3.5.1
 # RStudio server:v1.1.456 (all kamermanpr/docker-spars version tags < v2.0.0)
 # LaTex (TinyTex distribution, https://yihui.name/tinytex/)
-# tidyverse (MRAN 2018-10-03 R v3.5.1 snapshot)
+# tidyverse (MRAN 2018-09-01 R v3.5.1 snapshot)
 #
 FROM rocker/verse:3.5.1
 #
@@ -35,15 +35,9 @@ FROM rocker/verse:3.5.1
 MAINTAINER Peter Kamerman <peter.kamerman@gmail.com>
 #
 # <-- Add GitHub package -->
-# Lock thomasp85/patchwork installation to 22 September 2018 commit:
-# fd7958bae3e7a1e30237c751952e412a0a1d1242
+# Patchwork: 22 September 2018 commit: fd7958bae3e7a1e30237c751952e412a0a1d1242
 #
-# Installation of patchwork automatically installs the latest version
-# of ggplot2. To ensure consistency across packages with the
-# MRAN 2018-10-03 R v3.5.1 snapshot, ggplot2 (v3.0.0) is
-# re-installed in the MRAN package step below.
-#
-RUN Rscript -e "devtools::install_github('thomasp85/patchwork', ref='fd7958b')"
+RUN Rscript -e "devtools::install_github('thomasp85/patchwork')"
 #
 # <-- Add MRAN packages -->
 #
