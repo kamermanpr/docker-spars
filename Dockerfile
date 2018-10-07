@@ -40,4 +40,4 @@ RUN Rscript -e "devtools::install_github('thomasp85/patchwork', ref = 'fd7958bae
 #
 # <-- Add MRAN packages -->
 #
-RUN Rscript -e "install.packages(pkgs = c('boot', 'ggplot2', 'ggridges', 'ggeffects', 'kableExtra', 'robustlmm', 'lme4', 'lqmm', 'HLMdiag', 'sjPlot', 'car', 'lmerTest', 'influence.ME'), dependencies = 'Depends')"
+RUN Rscript -e "install.packages(c('boot', 'ggplot2', 'ggridges', 'ggeffects', 'kableExtra', 'lme4', 'lqmm', 'robustlmm', 'HLMdiag', 'sjPlot', 'car', 'lmerTest', 'influence.ME'))"
