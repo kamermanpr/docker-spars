@@ -65,15 +65,17 @@ Enter: `docker run --name spars -d -p 8787:8787 -e USER=user -e PASSWORD=passwor
     
 #### Prepare the SPARS directory
 
-On the **Files** tab in the bottom right panel of _RStudio_, click on the **Upload** button, navigate to the downloaded _zip_ file, and upload the file (it will self extract).
+On the **Files** tab in the bottom right panel of _RStudio_, click on the **'Upload'** button, navigate to the downloaded _zip_ file, and upload the file (it will self extract).
 
 The _SPARS_ directory comes with the outputs for all the analysis scripts in the _/outputs_ directory (_html_ and _md_ formats). However, should you wish to run the scripts yourself, there are several preparatory steps that are required:  
 
 1. Acquire the data. The data required to run the scripts have not been included in the repo because participants in the studies did not consent to public release of their data. However, the data are available on request from Tory Madden (torymadden@gmail.com) or Peter Kamerman (peter.kamerman@gmail.com). We will send you a _zip_ file with the data.
 
-    Using the directory tree in the **Files** tab of _RStudio_, open the _SPARS_ directory. Repeat the upload procedure described above, but upload the data _zip_ file we supplied you with into the _SPARS_ directory. 
+    Using the directory tree in the **Files** tab of _RStudio_, open the _SPARS_ directory. Repeat the upload procedure described above, but upload the zipped data file we supplied you with into the _SPARS_ directory. 
 
-2. Clean the _/outputs_ directory by entering `make clean` in the **Terminal** tab in bottom right panel of _RStudio_.
+2. In the _SPARS_ directory, double-click on the _SPARS.Rproj_ file, and follow the prompts (_RStudio_ with reload).
+
+3. Clean the _/outputs_ and _/figures_ directories by entering `make clean` in the **Terminal** tab in bottom right panel of _RStudio_.
 
 #### Run the SPARS analysis scripts
 
