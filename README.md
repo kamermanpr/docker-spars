@@ -45,7 +45,7 @@ You need to have _Docker_ installed on your computer. To do so, go to [_docker.c
 
 #### Download the latest image
 
-Enter: `docker pull kamermanpr/docker-spars:v1.1.1`
+Enter: `docker pull kamermanpr/docker-spars:v1.1.2`
 
 #### Download the repository
 
@@ -53,7 +53,7 @@ Download the compressed _zip_ file from _GitHub_ ([_kamermanpr/SPARS_](https://g
 
 #### Run the container
 
-Enter: `docker run --name spars -d -p 8787:8787 -e USER=user -e PASSWORD=password kamermanpr/docker-spars:v1.1.1`
+Enter: `docker run --name spars -d -p 8787:8787 -e USER=user -e PASSWORD=password kamermanpr/docker-spars:v1.1.2`
 
 #### Login to RStudio Server
 
@@ -73,7 +73,7 @@ The _SPARS_ directory comes with the outputs for all the analysis scripts in the
 
     Using the directory tree in the **Files** tab of _RStudio_, open the _SPARS_ directory. Repeat the upload procedure described above, but upload the zipped data file we supplied you with into the _SPARS_ directory. 
 
-2. In the _SPARS_ directory, double-click on the _SPARS.Rproj_ file, and follow the prompts (_RStudio_ with reload).
+2. In the _SPARS_ directory, double-click on the _SPARS.Rproj_ file, and follow the prompts (_RStudio_ will reload).
 
 3. Clean the _/outputs_ and _/figures_ directories by entering `make clean` in the **Terminal** tab in bottom right panel of _RStudio_.
 
@@ -94,4 +94,4 @@ To run individual RMarkdown scripts (_\*.Rmd_ files)
 
 #### Shutting down
 
-Once done, log out of _RStudio_ and enter the following into a terminal to stop the _Docker_ container: `docker stop spars`. If you then want to remove the container, enter: `docker rm spars`. If you also want to remove the _Docker_ image you downloaded, enter: `docker rmi kamermanpr/docker-spars:v1.1.1`
+Once done, log out of _RStudio_ and enter the following into a terminal to stop the _Docker_ container: `docker stop spars`. If you then want to remove the container, enter: `docker rm spars`. If you also want to remove the _Docker_ image you downloaded, enter: `docker rmi kamermanpr/docker-spars:v1.1.2`
