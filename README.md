@@ -73,7 +73,7 @@ The _SPARS_ directory comes with the outputs for all the analysis scripts in the
 
     Using the directory tree in the **Files** tab of _RStudio_, open the _SPARS_ directory. Repeat the upload procedure described above, but upload the zipped data file we supplied you with into the _SPARS_ directory. 
 
-2. In the _SPARS_ directory, double-click on the _SPARS.Rproj_ file, and follow the prompts (_RStudio_ with reload).
+2. In the _SPARS_ directory, double-click on the _SPARS.Rproj_ file, and follow the prompts (_RStudio_ will reload).
 
 3. Clean the _/outputs_ and _/figures_ directories by entering `make clean` in the **Terminal** tab in bottom right panel of _RStudio_.
 
